@@ -50,7 +50,36 @@ public class Pnach : MonoBehaviour
         "0000001A",
         "0000001F",
         "0000001D"
-    };        
+    };
+    List<string> keyItemsNames = new List<string>
+    {
+        "Oathkeeper",
+        "Oblivion",
+        "Star Seeker",
+        "Hidden Dragon",
+        "Heros Crest",
+        "Monochrome",
+        "Follow the Wind",
+        "Circle of Life",
+        "Photon Debugger",
+        "Gull Wing",
+        "Rumbling Rose",
+        "Guardian Soul",
+        "Wishing Lamp",
+        "Decisive Pumpkin",
+        "Sweet Memories",
+        "Mysterious Abyss",
+        "Sleeping Lion",
+        "Bond of Flame",
+        "Fatal Crest",
+        "Two Become One",
+        "Fenrir",
+        "Ultima Weapon",
+        "Winners Proof",
+        "Valor",
+        "Master",
+        "Final"
+    };
     List<string> Free = new List<string>
     {
         "11CE05E2",
@@ -826,111 +855,10 @@ public class Pnach : MonoBehaviour
                 if (parts[2] == STT[j])
                 {
                     STTCount++;
-                    if (parts[4] == "0000002A")
+                    if (keyItems.Contains(parts[4]))
                     {
-                        STTItems.Add("Oathkeeper");
+                        STTItems.Add(keyItemsNames[keyItems.IndexOf(parts[4])]);
                     }
-                    else if (parts[4] == "0000002B")
-                    {
-                        STTItems.Add("Oblivion");
-                    }
-                    else if (parts[4] == "000001E0")
-                    {
-                        STTItems.Add("Star Seeker");
-                    }
-                    else if (parts[4] == "000001E1")
-                    {
-                        STTItems.Add("Hidden Dragon");
-                    }
-                    else if (parts[4] == "000001E4")
-                    {
-                        STTItems.Add("Heros Crest");
-                    }
-                    else if (parts[4] == "000001E5")
-                    {
-                        STTItems.Add("Monochrome");
-                    }
-                    else if (parts[4] == "000001E6")
-                    {
-                        STTItems.Add("Follow the Wind");
-                    }
-                    else if (parts[4] == "000001E7")
-                    {
-                        STTItems.Add("Circle of Life");
-                    }
-                    else if (parts[4] == "000001E8")
-                    {
-                        STTItems.Add("Photon Debugger");
-                    }
-                    else if (parts[4] == "000001E9")
-                    {
-                        STTItems.Add("Gull Wing");
-                    }
-                    else if (parts[4] == "000001EA")
-                    {
-                        STTItems.Add("Rumbling Rose");
-                    }
-                    else if (parts[4] == "000001EB")
-                    {
-                        STTItems.Add("Guardian Soul");
-                    }
-                    else if (parts[4] == "000001EC")
-                    {
-                        STTItems.Add("Wishing Lamp");
-                    }
-                    else if (parts[4] == "000001ED")
-                    {
-                        STTItems.Add("Decisive Pumpkin");
-                    }
-                    else if (parts[4] == "000001EF")
-                    {
-                        STTItems.Add("Sweet Memories");
-                    }
-                    else if (parts[4] == "000001F0")
-                    {
-                        STTItems.Add("Mysterious Abyss");
-                    }
-                    else if (parts[4] == "000001EE")
-                    {
-                        STTItems.Add("Sleeping Lion");
-                    }
-                    else if (parts[4] == "000001F2")
-                    {
-                        STTItems.Add("Bond of Flame");
-                    }
-                    else if (parts[4] == "000001F1")
-                    {
-                        STTItems.Add("Fatal Crest");
-                    }
-                    else if (parts[4] == "0000021F")
-                    {
-                        STTItems.Add("Two Become One");
-                    }
-                    else if (parts[4] == "000001F3")
-                    {
-                        STTItems.Add("Fenrir");
-                    }
-                    else if (parts[4] == "000001F4")
-                    {
-                        STTItems.Add("Ultima Weapon");
-                    }
-                    else if (parts[4] == "00000220")
-                    {
-                        STTItems.Add("Winners Proof");
-                    }
-                    else if (parts[4] == "0000001A")
-                    {
-                        STTItems.Add("Valor");
-                    }
-                    else if (parts[4] == "0000001F")
-                    {
-                        STTItems.Add("Master");
-                    }
-                    else if (parts[4] == "0000001D")
-                    {
-                        STTItems.Add("Final");
-                    }
-                    break;
                 }
             }
             for (int j = 0; j < TT.Count; j++)
@@ -938,111 +866,10 @@ public class Pnach : MonoBehaviour
                 if (parts[2] == TT[j])
                 {
                     TTCount++;
-                    if (parts[4] == "0000002A")
+                    if (keyItems.Contains(parts[4]))
                     {
-                        TTItems.Add("Oathkeeper");
+                        TTItems.Add(keyItemsNames[keyItems.IndexOf(parts[4])]);
                     }
-                    else if (parts[4] == "0000002B")
-                    {
-                        TTItems.Add("Oblivion");
-                    }
-                    else if (parts[4] == "000001E0")
-                    {
-                        TTItems.Add("Star Seeker");
-                    }
-                    else if (parts[4] == "000001E1")
-                    {
-                        TTItems.Add("Hidden Dragon");
-                    }
-                    else if (parts[4] == "000001E4")
-                    {
-                        TTItems.Add("Heros Crest");
-                    }
-                    else if (parts[4] == "000001E5")
-                    {
-                        TTItems.Add("Monochrome");
-                    }
-                    else if (parts[4] == "000001E6")
-                    {
-                        TTItems.Add("Follow the Wind");
-                    }
-                    else if (parts[4] == "000001E7")
-                    {
-                        TTItems.Add("Circle of Life");
-                    }
-                    else if (parts[4] == "000001E8")
-                    {
-                        TTItems.Add("Photon Debugger");
-                    }
-                    else if (parts[4] == "000001E9")
-                    {
-                        TTItems.Add("Gull Wing");
-                    }
-                    else if (parts[4] == "000001EA")
-                    {
-                        TTItems.Add("Rumbling Rose");
-                    }
-                    else if (parts[4] == "000001EB")
-                    {
-                        TTItems.Add("Guardian Soul");
-                    }
-                    else if (parts[4] == "000001EC")
-                    {
-                        TTItems.Add("Wishing Lamp");
-                    }
-                    else if (parts[4] == "000001ED")
-                    {
-                        TTItems.Add("Decisive Pumpkin");
-                    }
-                    else if (parts[4] == "000001EF")
-                    {
-                        TTItems.Add("Sweet Memories");
-                    }
-                    else if (parts[4] == "000001F0")
-                    {
-                        TTItems.Add("Mysterious Abyss");
-                    }
-                    else if (parts[4] == "000001EE")
-                    {
-                        TTItems.Add("Sleeping Lion");
-                    }
-                    else if (parts[4] == "000001F2")
-                    {
-                        TTItems.Add("Bond of Flame");
-                    }
-                    else if (parts[4] == "000001F1")
-                    {
-                        TTItems.Add("Fatal Crest");
-                    }
-                    else if (parts[4] == "0000021F")
-                    {
-                        TTItems.Add("Two Become One");
-                    }
-                    else if (parts[4] == "000001F3")
-                    {
-                        TTItems.Add("Fenrir");
-                    }
-                    else if (parts[4] == "000001F4")
-                    {
-                        TTItems.Add("Ultima Weapon");
-                    }
-                    else if (parts[4] == "00000220")
-                    {
-                        TTItems.Add("Winners Proof");
-                    }
-                    else if (parts[4] == "0000001A")
-                    {
-                        TTItems.Add("Valor");
-                    }
-                    else if (parts[4] == "0000001F")
-                    {
-                        TTItems.Add("Master");
-                    }
-                    else if (parts[4] == "0000001D")
-                    {
-                        TTItems.Add("Final");
-                    }
-                    break;
                 }
             }
             for (int j = 0; j < HB.Count; j++)
@@ -1050,111 +877,10 @@ public class Pnach : MonoBehaviour
                 if (parts[2] == HB[j])
                 {
                     HBCount++;
-                    if (parts[4] == "0000002A")
+                    if (keyItems.Contains(parts[4]))
                     {
-                        HBItems.Add("Oathkeeper");
+                        HBItems.Add(keyItemsNames[keyItems.IndexOf(parts[4])]);
                     }
-                    else if (parts[4] == "0000002B")
-                    {
-                        HBItems.Add("Oblivion");
-                    }
-                    else if (parts[4] == "000001E0")
-                    {
-                        HBItems.Add("Star Seeker");
-                    }
-                    else if (parts[4] == "000001E1")
-                    {
-                        HBItems.Add("Hidden Dragon");
-                    }
-                    else if (parts[4] == "000001E4")
-                    {
-                        HBItems.Add("Heros Crest");
-                    }
-                    else if (parts[4] == "000001E5")
-                    {
-                        HBItems.Add("Monochrome");
-                    }
-                    else if (parts[4] == "000001E6")
-                    {
-                        HBItems.Add("Follow the Wind");
-                    }
-                    else if (parts[4] == "000001E7")
-                    {
-                        HBItems.Add("Circle of Life");
-                    }
-                    else if (parts[4] == "000001E8")
-                    {
-                        HBItems.Add("Photon Debugger");
-                    }
-                    else if (parts[4] == "000001E9")
-                    {
-                        HBItems.Add("Gull Wing");
-                    }
-                    else if (parts[4] == "000001EA")
-                    {
-                        HBItems.Add("Rumbling Rose");
-                    }
-                    else if (parts[4] == "000001EB")
-                    {
-                        HBItems.Add("Guardian Soul");
-                    }
-                    else if (parts[4] == "000001EC")
-                    {
-                        HBItems.Add("Wishing Lamp");
-                    }
-                    else if (parts[4] == "000001ED")
-                    {
-                        HBItems.Add("Decisive Pumpkin");
-                    }
-                    else if (parts[4] == "000001EF")
-                    {
-                        HBItems.Add("Sweet Memories");
-                    }
-                    else if (parts[4] == "000001F0")
-                    {
-                        HBItems.Add("Mysterious Abyss");
-                    }
-                    else if (parts[4] == "000001EE")
-                    {
-                        HBItems.Add("Sleeping Lion");
-                    }
-                    else if (parts[4] == "000001F2")
-                    {
-                        HBItems.Add("Bond of Flame");
-                    }
-                    else if (parts[4] == "000001F1")
-                    {
-                        HBItems.Add("Fatal Crest");
-                    }
-                    else if (parts[4] == "0000021F")
-                    {
-                        HBItems.Add("Two Become One");
-                    }
-                    else if (parts[4] == "000001F3")
-                    {
-                        HBItems.Add("Fenrir");
-                    }
-                    else if (parts[4] == "000001F4")
-                    {
-                        HBItems.Add("Ultima Weapon");
-                    }
-                    else if (parts[4] == "00000220")
-                    {
-                        HBItems.Add("Winners Proof");
-                    }
-                    else if (parts[4] == "0000001A")
-                    {
-                        HBItems.Add("Valor");
-                    }
-                    else if (parts[4] == "0000001F")
-                    {
-                        HBItems.Add("Master");
-                    }
-                    else if (parts[4] == "0000001D")
-                    {
-                        HBItems.Add("Final");
-                    }
-                    break;
                 }
             }
             for (int j = 0; j < HT.Count; j++)
@@ -1162,111 +888,10 @@ public class Pnach : MonoBehaviour
                 if (parts[2] == HT[j])
                 {
                     HTCount++;
-                    if (parts[4] == "0000002A")
+                    if (keyItems.Contains(parts[4]))
                     {
-                        HTItems.Add("Oathkeeper");
+                        HTItems.Add(keyItemsNames[keyItems.IndexOf(parts[4])]);
                     }
-                    else if (parts[4] == "0000002B")
-                    {
-                        HTItems.Add("Oblivion");
-                    }
-                    else if (parts[4] == "000001E0")
-                    {
-                        HTItems.Add("Star Seeker");
-                    }
-                    else if (parts[4] == "000001E1")
-                    {
-                        HTItems.Add("Hidden Dragon");
-                    }
-                    else if (parts[4] == "000001E4")
-                    {
-                        HTItems.Add("Heros Crest");
-                    }
-                    else if (parts[4] == "000001E5")
-                    {
-                        HTItems.Add("Monochrome");
-                    }
-                    else if (parts[4] == "000001E6")
-                    {
-                        HTItems.Add("Follow the Wind");
-                    }
-                    else if (parts[4] == "000001E7")
-                    {
-                        HTItems.Add("Circle of Life");
-                    }
-                    else if (parts[4] == "000001E8")
-                    {
-                        HTItems.Add("Photon Debugger");
-                    }
-                    else if (parts[4] == "000001E9")
-                    {
-                        HTItems.Add("Gull Wing");
-                    }
-                    else if (parts[4] == "000001EA")
-                    {
-                        HTItems.Add("Rumbling Rose");
-                    }
-                    else if (parts[4] == "000001EB")
-                    {
-                        HTItems.Add("Guardian Soul");
-                    }
-                    else if (parts[4] == "000001EC")
-                    {
-                        HTItems.Add("Wishing Lamp");
-                    }
-                    else if (parts[4] == "000001ED")
-                    {
-                        HTItems.Add("Decisive Pumpkin");
-                    }
-                    else if (parts[4] == "000001EF")
-                    {
-                        HTItems.Add("Sweet Memories");
-                    }
-                    else if (parts[4] == "000001F0")
-                    {
-                        HTItems.Add("Mysterious Abyss");
-                    }
-                    else if (parts[4] == "000001EE")
-                    {
-                        HTItems.Add("Sleeping Lion");
-                    }
-                    else if (parts[4] == "000001F2")
-                    {
-                        HTItems.Add("Bond of Flame");
-                    }
-                    else if (parts[4] == "000001F1")
-                    {
-                        HTItems.Add("Fatal Crest");
-                    }
-                    else if (parts[4] == "0000021F")
-                    {
-                        HTItems.Add("Two Become One");
-                    }
-                    else if (parts[4] == "000001F3")
-                    {
-                        HTItems.Add("Fenrir");
-                    }
-                    else if (parts[4] == "000001F4")
-                    {
-                        HTItems.Add("Ultima Weapon");
-                    }
-                    else if (parts[4] == "00000220")
-                    {
-                        HTItems.Add("Winners Proof");
-                    }
-                    else if (parts[4] == "0000001A")
-                    {
-                        HTItems.Add("Valor");
-                    }
-                    else if (parts[4] == "0000001F")
-                    {
-                        HTItems.Add("Master");
-                    }
-                    else if (parts[4] == "0000001D")
-                    {
-                        HTItems.Add("Final");
-                    }
-                    break;
                 }
             }
             for (int j = 0; j < SP.Count; j++)
@@ -1274,111 +899,10 @@ public class Pnach : MonoBehaviour
                 if (parts[2] == SP[j])
                 {
                     SPCount++;
-                    if (parts[4] == "0000002A")
+                    if (keyItems.Contains(parts[4]))
                     {
-                        SPItems.Add("Oathkeeper");
+                        SPItems.Add(keyItemsNames[keyItems.IndexOf(parts[4])]);
                     }
-                    else if (parts[4] == "0000002B")
-                    {
-                        SPItems.Add("Oblivion");
-                    }
-                    else if (parts[4] == "000001E0")
-                    {
-                        SPItems.Add("Star Seeker");
-                    }
-                    else if (parts[4] == "000001E1")
-                    {
-                        SPItems.Add("Hidden Dragon");
-                    }
-                    else if (parts[4] == "000001E4")
-                    {
-                        SPItems.Add("Heros Crest");
-                    }
-                    else if (parts[4] == "000001E5")
-                    {
-                        SPItems.Add("Monochrome");
-                    }
-                    else if (parts[4] == "000001E6")
-                    {
-                        SPItems.Add("Follow the Wind");
-                    }
-                    else if (parts[4] == "000001E7")
-                    {
-                        SPItems.Add("Circle of Life");
-                    }
-                    else if (parts[4] == "000001E8")
-                    {
-                        SPItems.Add("Photon Debugger");
-                    }
-                    else if (parts[4] == "000001E9")
-                    {
-                        SPItems.Add("Gull Wing");
-                    }
-                    else if (parts[4] == "000001EA")
-                    {
-                        SPItems.Add("Rumbling Rose");
-                    }
-                    else if (parts[4] == "000001EB")
-                    {
-                        SPItems.Add("Guardian Soul");
-                    }
-                    else if (parts[4] == "000001EC")
-                    {
-                        SPItems.Add("Wishing Lamp");
-                    }
-                    else if (parts[4] == "000001ED")
-                    {
-                        SPItems.Add("Decisive Pumpkin");
-                    }
-                    else if (parts[4] == "000001EF")
-                    {
-                        SPItems.Add("Sweet Memories");
-                    }
-                    else if (parts[4] == "000001F0")
-                    {
-                        SPItems.Add("Mysterious Abyss");
-                    }
-                    else if (parts[4] == "000001EE")
-                    {
-                        SPItems.Add("Sleeping Lion");
-                    }
-                    else if (parts[4] == "000001F2")
-                    {
-                        SPItems.Add("Bond of Flame");
-                    }
-                    else if (parts[4] == "000001F1")
-                    {
-                        SPItems.Add("Fatal Crest");
-                    }
-                    else if (parts[4] == "0000021F")
-                    {
-                        SPItems.Add("Two Become One");
-                    }
-                    else if (parts[4] == "000001F3")
-                    {
-                        SPItems.Add("Fenrir");
-                    }
-                    else if (parts[4] == "000001F4")
-                    {
-                        SPItems.Add("Ultima Weapon");
-                    }
-                    else if (parts[4] == "00000220")
-                    {
-                        SPItems.Add("Winners Proof");
-                    }
-                    else if (parts[4] == "0000001A")
-                    {
-                        SPItems.Add("Valor");
-                    }
-                    else if (parts[4] == "0000001F")
-                    {
-                        SPItems.Add("Master");
-                    }
-                    else if (parts[4] == "0000001D")
-                    {
-                        SPItems.Add("Final");
-                    }
-                    break;
                 }
             }
             for (int j = 0; j < PR.Count; j++)
@@ -1386,111 +910,10 @@ public class Pnach : MonoBehaviour
                 if (parts[2] == PR[j])
                 {
                     PRCount++;
-                    if (parts[4] == "0000002A")
+                    if (keyItems.Contains(parts[4]))
                     {
-                        PRItems.Add("Oathkeeper");
+                        PRItems.Add(keyItemsNames[keyItems.IndexOf(parts[4])]);
                     }
-                    else if (parts[4] == "0000002B")
-                    {
-                        PRItems.Add("Oblivion");
-                    }
-                    else if (parts[4] == "000001E0")
-                    {
-                        PRItems.Add("Star Seeker");
-                    }
-                    else if (parts[4] == "000001E1")
-                    {
-                        PRItems.Add("Hidden Dragon");
-                    }
-                    else if (parts[4] == "000001E4")
-                    {
-                        PRItems.Add("Heros Crest");
-                    }
-                    else if (parts[4] == "000001E5")
-                    {
-                        PRItems.Add("Monochrome");
-                    }
-                    else if (parts[4] == "000001E6")
-                    {
-                        PRItems.Add("Follow the Wind");
-                    }
-                    else if (parts[4] == "000001E7")
-                    {
-                        PRItems.Add("Circle of Life");
-                    }
-                    else if (parts[4] == "000001E8")
-                    {
-                        PRItems.Add("Photon Debugger");
-                    }
-                    else if (parts[4] == "000001E9")
-                    {
-                        PRItems.Add("Gull Wing");
-                    }
-                    else if (parts[4] == "000001EA")
-                    {
-                        PRItems.Add("Rumbling Rose");
-                    }
-                    else if (parts[4] == "000001EB")
-                    {
-                        PRItems.Add("Guardian Soul");
-                    }
-                    else if (parts[4] == "000001EC")
-                    {
-                        PRItems.Add("Wishing Lamp");
-                    }
-                    else if (parts[4] == "000001ED")
-                    {
-                        PRItems.Add("Decisive Pumpkin");
-                    }
-                    else if (parts[4] == "000001EF")
-                    {
-                        PRItems.Add("Sweet Memories");
-                    }
-                    else if (parts[4] == "000001F0")
-                    {
-                        PRItems.Add("Mysterious Abyss");
-                    }
-                    else if (parts[4] == "000001EE")
-                    {
-                        PRItems.Add("Sleeping Lion");
-                    }
-                    else if (parts[4] == "000001F2")
-                    {
-                        PRItems.Add("Bond of Flame");
-                    }
-                    else if (parts[4] == "000001F1")
-                    {
-                        PRItems.Add("Fatal Crest");
-                    }
-                    else if (parts[4] == "0000021F")
-                    {
-                        PRItems.Add("Two Become One");
-                    }
-                    else if (parts[4] == "000001F3")
-                    {
-                        PRItems.Add("Fenrir");
-                    }
-                    else if (parts[4] == "000001F4")
-                    {
-                        PRItems.Add("Ultima Weapon");
-                    }
-                    else if (parts[4] == "00000220")
-                    {
-                        PRItems.Add("Winners Proof");
-                    }
-                    else if (parts[4] == "0000001A")
-                    {
-                        PRItems.Add("Valor");
-                    }
-                    else if (parts[4] == "0000001F")
-                    {
-                        PRItems.Add("Master");
-                    }
-                    else if (parts[4] == "0000001D")
-                    {
-                        PRItems.Add("Final");
-                    }
-                    break;
                 }
             }
             for (int j = 0; j < OC.Count; j++)
@@ -1498,111 +921,10 @@ public class Pnach : MonoBehaviour
                 if (parts[2] == OC[j])
                 {
                     OCCount++;
-                    if (parts[4] == "0000002A")
+                    if (keyItems.Contains(parts[4]))
                     {
-                        OCItems.Add("Oathkeeper");
+                        OCItems.Add(keyItemsNames[keyItems.IndexOf(parts[4])]);
                     }
-                    else if (parts[4] == "0000002B")
-                    {
-                        OCItems.Add("Oblivion");
-                    }
-                    else if (parts[4] == "000001E0")
-                    {
-                        OCItems.Add("Star Seeker");
-                    }
-                    else if (parts[4] == "000001E1")
-                    {
-                        OCItems.Add("Hidden Dragon");
-                    }
-                    else if (parts[4] == "000001E4")
-                    {
-                        OCItems.Add("Heros Crest");
-                    }
-                    else if (parts[4] == "000001E5")
-                    {
-                        OCItems.Add("Monochrome");
-                    }
-                    else if (parts[4] == "000001E6")
-                    {
-                        OCItems.Add("Follow the Wind");
-                    }
-                    else if (parts[4] == "000001E7")
-                    {
-                        OCItems.Add("Circle of Life");
-                    }
-                    else if (parts[4] == "000001E8")
-                    {
-                        OCItems.Add("Photon Debugger");
-                    }
-                    else if (parts[4] == "000001E9")
-                    {
-                        OCItems.Add("Gull Wing");
-                    }
-                    else if (parts[4] == "000001EA")
-                    {
-                        OCItems.Add("Rumbling Rose");
-                    }
-                    else if (parts[4] == "000001EB")
-                    {
-                        OCItems.Add("Guardian Soul");
-                    }
-                    else if (parts[4] == "000001EC")
-                    {
-                        OCItems.Add("Wishing Lamp");
-                    }
-                    else if (parts[4] == "000001ED")
-                    {
-                        OCItems.Add("Decisive Pumpkin");
-                    }
-                    else if (parts[4] == "000001EF")
-                    {
-                        OCItems.Add("Sweet Memories");
-                    }
-                    else if (parts[4] == "000001F0")
-                    {
-                        OCItems.Add("Mysterious Abyss");
-                    }
-                    else if (parts[4] == "000001EE")
-                    {
-                        OCItems.Add("Sleeping Lion");
-                    }
-                    else if (parts[4] == "000001F2")
-                    {
-                        OCItems.Add("Bond of Flame");
-                    }
-                    else if (parts[4] == "000001F1")
-                    {
-                        OCItems.Add("Fatal Crest");
-                    }
-                    else if (parts[4] == "0000021F")
-                    {
-                        OCItems.Add("Two Become One");
-                    }
-                    else if (parts[4] == "000001F3")
-                    {
-                        OCItems.Add("Fenrir");
-                    }
-                    else if (parts[4] == "000001F4")
-                    {
-                        OCItems.Add("Ultima Weapon");
-                    }
-                    else if (parts[4] == "00000220")
-                    {
-                        OCItems.Add("Winners Proof");
-                    }
-                    else if (parts[4] == "0000001A")
-                    {
-                        OCItems.Add("Valor");
-                    }
-                    else if (parts[4] == "0000001F")
-                    {
-                        OCItems.Add("Master");
-                    }
-                    else if (parts[4] == "0000001D")
-                    {
-                        OCItems.Add("Final");
-                    }
-                    break;
                 }
             }
             for (int j = 0; j < LoD.Count; j++)
@@ -1610,111 +932,10 @@ public class Pnach : MonoBehaviour
                 if (parts[2] == LoD[j])
                 {
                     LoDCount++;
-                    if (parts[4] == "0000002A")
+                    if (keyItems.Contains(parts[4]))
                     {
-                        LoDItems.Add("Oathkeeper");
+                        LoDItems.Add(keyItemsNames[keyItems.IndexOf(parts[4])]);
                     }
-                    else if (parts[4] == "0000002B")
-                    {
-                        LoDItems.Add("Oblivion");
-                    }
-                    else if (parts[4] == "000001E0")
-                    {
-                        LoDItems.Add("Star Seeker");
-                    }
-                    else if (parts[4] == "000001E1")
-                    {
-                        LoDItems.Add("Hidden Dragon");
-                    }
-                    else if (parts[4] == "000001E4")
-                    {
-                        LoDItems.Add("Heros Crest");
-                    }
-                    else if (parts[4] == "000001E5")
-                    {
-                        LoDItems.Add("Monochrome");
-                    }
-                    else if (parts[4] == "000001E6")
-                    {
-                        LoDItems.Add("Follow the Wind");
-                    }
-                    else if (parts[4] == "000001E7")
-                    {
-                        LoDItems.Add("Circle of Life");
-                    }
-                    else if (parts[4] == "000001E8")
-                    {
-                        LoDItems.Add("Photon Debugger");
-                    }
-                    else if (parts[4] == "000001E9")
-                    {
-                        LoDItems.Add("Gull Wing");
-                    }
-                    else if (parts[4] == "000001EA")
-                    {
-                        LoDItems.Add("Rumbling Rose");
-                    }
-                    else if (parts[4] == "000001EB")
-                    {
-                        LoDItems.Add("Guardian Soul");
-                    }
-                    else if (parts[4] == "000001EC")
-                    {
-                        LoDItems.Add("Wishing Lamp");
-                    }
-                    else if (parts[4] == "000001ED")
-                    {
-                        LoDItems.Add("Decisive Pumpkin");
-                    }
-                    else if (parts[4] == "000001EF")
-                    {
-                        LoDItems.Add("Sweet Memories");
-                    }
-                    else if (parts[4] == "000001F0")
-                    {
-                        LoDItems.Add("Mysterious Abyss");
-                    }
-                    else if (parts[4] == "000001EE")
-                    {
-                        LoDItems.Add("Sleeping Lion");
-                    }
-                    else if (parts[4] == "000001F2")
-                    {
-                        LoDItems.Add("Bond of Flame");
-                    }
-                    else if (parts[4] == "000001F1")
-                    {
-                        LoDItems.Add("Fatal Crest");
-                    }
-                    else if (parts[4] == "0000021F")
-                    {
-                        LoDItems.Add("Two Become One");
-                    }
-                    else if (parts[4] == "000001F3")
-                    {
-                        LoDItems.Add("Fenrir");
-                    }
-                    else if (parts[4] == "000001F4")
-                    {
-                        LoDItems.Add("Ultima Weapon");
-                    }
-                    else if (parts[4] == "00000220")
-                    {
-                        LoDItems.Add("Winners Proof");
-                    }
-                    else if (parts[4] == "0000001A")
-                    {
-                        LoDItems.Add("Valor");
-                    }
-                    else if (parts[4] == "0000001F")
-                    {
-                        LoDItems.Add("Master");
-                    }
-                    else if (parts[4] == "0000001D")
-                    {
-                        LoDItems.Add("Final");
-                    }
-                    break;
                 }
             }
             for (int j = 0; j < TWTNW.Count; j++)
@@ -1722,111 +943,10 @@ public class Pnach : MonoBehaviour
                 if (parts[2] == TWTNW[j])
                 {
                     TWTNWCount++;
-                    if (parts[4] == "0000002A")
+                    if (keyItems.Contains(parts[4]))
                     {
-                        TWTNWItems.Add("Oathkeeper");
+                        TWTNWItems.Add(keyItemsNames[keyItems.IndexOf(parts[4])]);
                     }
-                    else if (parts[4] == "0000002B")
-                    {
-                        TWTNWItems.Add("Oblivion");
-                    }
-                    else if (parts[4] == "000001E0")
-                    {
-                        TWTNWItems.Add("Star Seeker");
-                    }
-                    else if (parts[4] == "000001E1")
-                    {
-                        TWTNWItems.Add("Hidden Dragon");
-                    }
-                    else if (parts[4] == "000001E4")
-                    {
-                        TWTNWItems.Add("Heros Crest");
-                    }
-                    else if (parts[4] == "000001E5")
-                    {
-                        TWTNWItems.Add("Monochrome");
-                    }
-                    else if (parts[4] == "000001E6")
-                    {
-                        TWTNWItems.Add("Follow the Wind");
-                    }
-                    else if (parts[4] == "000001E7")
-                    {
-                        TWTNWItems.Add("Circle of Life");
-                    }
-                    else if (parts[4] == "000001E8")
-                    {
-                        TWTNWItems.Add("Photon Debugger");
-                    }
-                    else if (parts[4] == "000001E9")
-                    {
-                        TWTNWItems.Add("Gull Wing");
-                    }
-                    else if (parts[4] == "000001EA")
-                    {
-                        TWTNWItems.Add("Rumbling Rose");
-                    }
-                    else if (parts[4] == "000001EB")
-                    {
-                        TWTNWItems.Add("Guardian Soul");
-                    }
-                    else if (parts[4] == "000001EC")
-                    {
-                        TWTNWItems.Add("Wishing Lamp");
-                    }
-                    else if (parts[4] == "000001ED")
-                    {
-                        TWTNWItems.Add("Decisive Pumpkin");
-                    }
-                    else if (parts[4] == "000001EF")
-                    {
-                        TWTNWItems.Add("Sweet Memories");
-                    }
-                    else if (parts[4] == "000001F0")
-                    {
-                        TWTNWItems.Add("Mysterious Abyss");
-                    }
-                    else if (parts[4] == "000001EE")
-                    {
-                        TWTNWItems.Add("Sleeping Lion");
-                    }
-                    else if (parts[4] == "000001F2")
-                    {
-                        TWTNWItems.Add("Bond of Flame");
-                    }
-                    else if (parts[4] == "000001F1")
-                    {
-                        TWTNWItems.Add("Fatal Crest");
-                    }
-                    else if (parts[4] == "0000021F")
-                    {
-                        TWTNWItems.Add("Two Become One");
-                    }
-                    else if (parts[4] == "000001F3")
-                    {
-                        TWTNWItems.Add("Fenrir");
-                    }
-                    else if (parts[4] == "000001F4")
-                    {
-                        TWTNWItems.Add("Ultima Weapon");
-                    }
-                    else if (parts[4] == "00000220")
-                    {
-                        TWTNWItems.Add("Winners Proof");
-                    }
-                    else if (parts[4] == "0000001A")
-                    {
-                        TWTNWItems.Add("Valor");
-                    }
-                    else if (parts[4] == "0000001F")
-                    {
-                        TWTNWItems.Add("Master");
-                    }
-                    else if (parts[4] == "0000001D")
-                    {
-                        TWTNWItems.Add("Final");
-                    }
-                    break;
                 }
             }
             for (int j = 0; j < BC.Count; j++)
@@ -1834,111 +954,10 @@ public class Pnach : MonoBehaviour
                 if (parts[2] == BC[j])
                 {
                     BCCount++;
-                    if (parts[4] == "0000002A")
+                    if (keyItems.Contains(parts[4]))
                     {
-                        BCItems.Add("Oathkeeper");
+                        BCItems.Add(keyItemsNames[keyItems.IndexOf(parts[4])]);
                     }
-                    else if (parts[4] == "0000002B")
-                    {
-                        BCItems.Add("Oblivion");
-                    }
-                    else if (parts[4] == "000001E0")
-                    {
-                        BCItems.Add("Star Seeker");
-                    }
-                    else if (parts[4] == "000001E1")
-                    {
-                        BCItems.Add("Hidden Dragon");
-                    }
-                    else if (parts[4] == "000001E4")
-                    {
-                        BCItems.Add("Heros Crest");
-                    }
-                    else if (parts[4] == "000001E5")
-                    {
-                        BCItems.Add("Monochrome");
-                    }
-                    else if (parts[4] == "000001E6")
-                    {
-                        BCItems.Add("Follow the Wind");
-                    }
-                    else if (parts[4] == "000001E7")
-                    {
-                        BCItems.Add("Circle of Life");
-                    }
-                    else if (parts[4] == "000001E8")
-                    {
-                        BCItems.Add("Photon Debugger");
-                    }
-                    else if (parts[4] == "000001E9")
-                    {
-                        BCItems.Add("Gull Wing");
-                    }
-                    else if (parts[4] == "000001EA")
-                    {
-                        BCItems.Add("Rumbling Rose");
-                    }
-                    else if (parts[4] == "000001EB")
-                    {
-                        BCItems.Add("Guardian Soul");
-                    }
-                    else if (parts[4] == "000001EC")
-                    {
-                        BCItems.Add("Wishing Lamp");
-                    }
-                    else if (parts[4] == "000001ED")
-                    {
-                        BCItems.Add("Decisive Pumpkin");
-                    }
-                    else if (parts[4] == "000001EF")
-                    {
-                        BCItems.Add("Sweet Memories");
-                    }
-                    else if (parts[4] == "000001F0")
-                    {
-                        BCItems.Add("Mysterious Abyss");
-                    }
-                    else if (parts[4] == "000001EE")
-                    {
-                        BCItems.Add("Sleeping Lion");
-                    }
-                    else if (parts[4] == "000001F2")
-                    {
-                        BCItems.Add("Bond of Flame");
-                    }
-                    else if (parts[4] == "000001F1")
-                    {
-                        BCItems.Add("Fatal Crest");
-                    }
-                    else if (parts[4] == "0000021F")
-                    {
-                        BCItems.Add("Two Become One");
-                    }
-                    else if (parts[4] == "000001F3")
-                    {
-                        BCItems.Add("Fenrir");
-                    }
-                    else if (parts[4] == "000001F4")
-                    {
-                        BCItems.Add("Ultima Weapon");
-                    }
-                    else if (parts[4] == "00000220")
-                    {
-                        BCItems.Add("Winners Proof");
-                    }
-                    else if (parts[4] == "0000001A")
-                    {
-                        BCItems.Add("Valor");
-                    }
-                    else if (parts[4] == "0000001F")
-                    {
-                        BCItems.Add("Master");
-                    }
-                    else if (parts[4] == "0000001D")
-                    {
-                        BCItems.Add("Final");
-                    }
-                    break;
                 }
             }
             for (int j = 0; j < AG.Count; j++)
@@ -1946,111 +965,10 @@ public class Pnach : MonoBehaviour
                 if (parts[2] == AG[j])
                 {
                     AGCount++;
-                    if (parts[4] == "0000002A")
+                    if (keyItems.Contains(parts[4]))
                     {
-                        AGItems.Add("Oathkeeper");
+                        AGItems.Add(keyItemsNames[keyItems.IndexOf(parts[4])]);
                     }
-                    else if (parts[4] == "0000002B")
-                    {
-                        AGItems.Add("Oblivion");
-                    }
-                    else if (parts[4] == "000001E0")
-                    {
-                        AGItems.Add("Star Seeker");
-                    }
-                    else if (parts[4] == "000001E1")
-                    {
-                        AGItems.Add("Hidden Dragon");
-                    }
-                    else if (parts[4] == "000001E4")
-                    {
-                        AGItems.Add("Heros Crest");
-                    }
-                    else if (parts[4] == "000001E5")
-                    {
-                        AGItems.Add("Monochrome");
-                    }
-                    else if (parts[4] == "000001E6")
-                    {
-                        AGItems.Add("Follow the Wind");
-                    }
-                    else if (parts[4] == "000001E7")
-                    {
-                        AGItems.Add("Circle of Life");
-                    }
-                    else if (parts[4] == "000001E8")
-                    {
-                        AGItems.Add("Photon Debugger");
-                    }
-                    else if (parts[4] == "000001E9")
-                    {
-                        AGItems.Add("Gull Wing");
-                    }
-                    else if (parts[4] == "000001EA")
-                    {
-                        AGItems.Add("Rumbling Rose");
-                    }
-                    else if (parts[4] == "000001EB")
-                    {
-                        AGItems.Add("Guardian Soul");
-                    }
-                    else if (parts[4] == "000001EC")
-                    {
-                        AGItems.Add("Wishing Lamp");
-                    }
-                    else if (parts[4] == "000001ED")
-                    {
-                        AGItems.Add("Decisive Pumpkin");
-                    }
-                    else if (parts[4] == "000001EF")
-                    {
-                        AGItems.Add("Sweet Memories");
-                    }
-                    else if (parts[4] == "000001F0")
-                    {
-                        AGItems.Add("Mysterious Abyss");
-                    }
-                    else if (parts[4] == "000001EE")
-                    {
-                        AGItems.Add("Sleeping Lion");
-                    }
-                    else if (parts[4] == "000001F2")
-                    {
-                        AGItems.Add("Bond of Flame");
-                    }
-                    else if (parts[4] == "000001F1")
-                    {
-                        AGItems.Add("Fatal Crest");
-                    }
-                    else if (parts[4] == "0000021F")
-                    {
-                        AGItems.Add("Two Become One");
-                    }
-                    else if (parts[4] == "000001F3")
-                    {
-                        AGItems.Add("Fenrir");
-                    }
-                    else if (parts[4] == "000001F4")
-                    {
-                        AGItems.Add("Ultima Weapon");
-                    }
-                    else if (parts[4] == "00000220")
-                    {
-                        AGItems.Add("Winners Proof");
-                    }
-                    else if (parts[4] == "0000001A")
-                    {
-                        AGItems.Add("Valor");
-                    }
-                    else if (parts[4] == "0000001F")
-                    {
-                        AGItems.Add("Master");
-                    }
-                    else if (parts[4] == "0000001D")
-                    {
-                        AGItems.Add("Final");
-                    }
-                    break;
                 }
             }
             for (int j = 0; j < PL.Count; j++)
@@ -2058,111 +976,10 @@ public class Pnach : MonoBehaviour
                 if (parts[2] == PL[j])
                 {
                     PLCount++;
-                    if (parts[4] == "0000002A")
+                    if (keyItems.Contains(parts[4]))
                     {
-                        PLItems.Add("Oathkeeper");
+                        PLItems.Add(keyItemsNames[keyItems.IndexOf(parts[4])]);
                     }
-                    else if (parts[4] == "0000002B")
-                    {
-                        PLItems.Add("Oblivion");
-                    }
-                    else if (parts[4] == "000001E0")
-                    {
-                        PLItems.Add("Star Seeker");
-                    }
-                    else if (parts[4] == "000001E1")
-                    {
-                        PLItems.Add("Hidden Dragon");
-                    }
-                    else if (parts[4] == "000001E4")
-                    {
-                        PLItems.Add("Heros Crest");
-                    }
-                    else if (parts[4] == "000001E5")
-                    {
-                        PLItems.Add("Monochrome");
-                    }
-                    else if (parts[4] == "000001E6")
-                    {
-                        PLItems.Add("Follow the Wind");
-                    }
-                    else if (parts[4] == "000001E7")
-                    {
-                        PLItems.Add("Circle of Life");
-                    }
-                    else if (parts[4] == "000001E8")
-                    {
-                        PLItems.Add("Photon Debugger");
-                    }
-                    else if (parts[4] == "000001E9")
-                    {
-                        PLItems.Add("Gull Wing");
-                    }
-                    else if (parts[4] == "000001EA")
-                    {
-                        PLItems.Add("Rumbling Rose");
-                    }
-                    else if (parts[4] == "000001EB")
-                    {
-                        PLItems.Add("Guardian Soul");
-                    }
-                    else if (parts[4] == "000001EC")
-                    {
-                        PLItems.Add("Wishing Lamp");
-                    }
-                    else if (parts[4] == "000001ED")
-                    {
-                        PLItems.Add("Decisive Pumpkin");
-                    }
-                    else if (parts[4] == "000001EF")
-                    {
-                        PLItems.Add("Sweet Memories");
-                    }
-                    else if (parts[4] == "000001F0")
-                    {
-                        PLItems.Add("Mysterious Abyss");
-                    }
-                    else if (parts[4] == "000001EE")
-                    {
-                        PLItems.Add("Sleeping Lion");
-                    }
-                    else if (parts[4] == "000001F2")
-                    {
-                        PLItems.Add("Bond of Flame");
-                    }
-                    else if (parts[4] == "000001F1")
-                    {
-                        PLItems.Add("Fatal Crest");
-                    }
-                    else if (parts[4] == "0000021F")
-                    {
-                        PLItems.Add("Two Become One");
-                    }
-                    else if (parts[4] == "000001F3")
-                    {
-                        PLItems.Add("Fenrir");
-                    }
-                    else if (parts[4] == "000001F4")
-                    {
-                        PLItems.Add("Ultima Weapon");
-                    }
-                    else if (parts[4] == "00000220")
-                    {
-                        PLItems.Add("Winners Proof");
-                    }
-                    else if (parts[4] == "0000001A")
-                    {
-                        PLItems.Add("Valor");
-                    }
-                    else if (parts[4] == "0000001F")
-                    {
-                        PLItems.Add("Master");
-                    }
-                    else if (parts[4] == "0000001D")
-                    {
-                        PLItems.Add("Final");
-                    }
-                    break;
                 }
             }
             for (int j = 0; j < DC.Count; j++)
@@ -2170,111 +987,10 @@ public class Pnach : MonoBehaviour
                 if (parts[2] == DC[j])
                 {
                     DCCount++;
-                    if (parts[4] == "0000002A")
+                    if (keyItems.Contains(parts[4]))
                     {
-                        DCItems.Add("Oathkeeper");
+                        DCItems.Add(keyItemsNames[keyItems.IndexOf(parts[4])]);
                     }
-                    else if (parts[4] == "0000002B")
-                    {
-                        DCItems.Add("Oblivion");
-                    }
-                    else if (parts[4] == "000001E0")
-                    {
-                        DCItems.Add("Star Seeker");
-                    }
-                    else if (parts[4] == "000001E1")
-                    {
-                        DCItems.Add("Hidden Dragon");
-                    }
-                    else if (parts[4] == "000001E4")
-                    {
-                        DCItems.Add("Heros Crest");
-                    }
-                    else if (parts[4] == "000001E5")
-                    {
-                        DCItems.Add("Monochrome");
-                    }
-                    else if (parts[4] == "000001E6")
-                    {
-                        DCItems.Add("Follow the Wind");
-                    }
-                    else if (parts[4] == "000001E7")
-                    {
-                        DCItems.Add("Circle of Life");
-                    }
-                    else if (parts[4] == "000001E8")
-                    {
-                        DCItems.Add("Photon Debugger");
-                    }
-                    else if (parts[4] == "000001E9")
-                    {
-                        DCItems.Add("Gull Wing");
-                    }
-                    else if (parts[4] == "000001EA")
-                    {
-                        DCItems.Add("Rumbling Rose");
-                    }
-                    else if (parts[4] == "000001EB")
-                    {
-                        DCItems.Add("Guardian Soul");
-                    }
-                    else if (parts[4] == "000001EC")
-                    {
-                        DCItems.Add("Wishing Lamp");
-                    }
-                    else if (parts[4] == "000001ED")
-                    {
-                        DCItems.Add("Decisive Pumpkin");
-                    }
-                    else if (parts[4] == "000001EF")
-                    {
-                        DCItems.Add("Sweet Memories");
-                    }
-                    else if (parts[4] == "000001F0")
-                    {
-                        DCItems.Add("Mysterious Abyss");
-                    }
-                    else if (parts[4] == "000001EE")
-                    {
-                        DCItems.Add("Sleeping Lion");
-                    }
-                    else if (parts[4] == "000001F2")
-                    {
-                        DCItems.Add("Bond of Flame");
-                    }
-                    else if (parts[4] == "000001F1")
-                    {
-                        DCItems.Add("Fatal Crest");
-                    }
-                    else if (parts[4] == "0000021F")
-                    {
-                        DCItems.Add("Two Become One");
-                    }
-                    else if (parts[4] == "000001F3")
-                    {
-                        DCItems.Add("Fenrir");
-                    }
-                    else if (parts[4] == "000001F4")
-                    {
-                        DCItems.Add("Ultima Weapon");
-                    }
-                    else if (parts[4] == "00000220")
-                    {
-                        DCItems.Add("Winners Proof");
-                    }
-                    else if (parts[4] == "0000001A")
-                    {
-                        DCItems.Add("Valor");
-                    }
-                    else if (parts[4] == "0000001F")
-                    {
-                        DCItems.Add("Master");
-                    }
-                    else if (parts[4] == "0000001D")
-                    {
-                        DCItems.Add("Final");
-                    }
-                    break;
                 }
             }
             for (int j = 0; j < hundredacre.Count; j++)
@@ -2282,111 +998,10 @@ public class Pnach : MonoBehaviour
                 if (parts[2] == hundredacre[j])
                 {
                     hundredacreCount++;
-                    if (parts[4] == "0000002A")
+                    if (keyItems.Contains(parts[4]))
                     {
-                        HundredItems.Add("Oathkeeper");
+                        HundredItems.Add(keyItemsNames[keyItems.IndexOf(parts[4])]);
                     }
-                    else if (parts[4] == "0000002B")
-                    {
-                        HundredItems.Add("Oblivion");
-                    }
-                    else if (parts[4] == "000001E0")
-                    {
-                        HundredItems.Add("Star Seeker");
-                    }
-                    else if (parts[4] == "000001E1")
-                    {
-                        HundredItems.Add("Hidden Dragon");
-                    }
-                    else if (parts[4] == "000001E4")
-                    {
-                        HundredItems.Add("Heros Crest");
-                    }
-                    else if (parts[4] == "000001E5")
-                    {
-                        HundredItems.Add("Monochrome");
-                    }
-                    else if (parts[4] == "000001E6")
-                    {
-                        HundredItems.Add("Follow the Wind");
-                    }
-                    else if (parts[4] == "000001E7")
-                    {
-                        HundredItems.Add("Circle of Life");
-                    }
-                    else if (parts[4] == "000001E8")
-                    {
-                        HundredItems.Add("Photon Debugger");
-                    }
-                    else if (parts[4] == "000001E9")
-                    {
-                        HundredItems.Add("Gull Wing");
-                    }
-                    else if (parts[4] == "000001EA")
-                    {
-                        HundredItems.Add("Rumbling Rose");
-                    }
-                    else if (parts[4] == "000001EB")
-                    {
-                        HundredItems.Add("Guardian Soul");
-                    }
-                    else if (parts[4] == "000001EC")
-                    {
-                        HundredItems.Add("Wishing Lamp");
-                    }
-                    else if (parts[4] == "000001ED")
-                    {
-                        HundredItems.Add("Decisive Pumpkin");
-                    }
-                    else if (parts[4] == "000001EF")
-                    {
-                        HundredItems.Add("Sweet Memories");
-                    }
-                    else if (parts[4] == "000001F0")
-                    {
-                        HundredItems.Add("Mysterious Abyss");
-                    }
-                    else if (parts[4] == "000001EE")
-                    {
-                        HundredItems.Add("Sleeping Lion");
-                    }
-                    else if (parts[4] == "000001F2")
-                    {
-                        HundredItems.Add("Bond of Flame");
-                    }
-                    else if (parts[4] == "000001F1")
-                    {
-                        HundredItems.Add("Fatal Crest");
-                    }
-                    else if (parts[4] == "0000021F")
-                    {
-                        HundredItems.Add("Two Become One");
-                    }
-                    else if (parts[4] == "000001F3")
-                    {
-                        HundredItems.Add("Fenrir");
-                    }
-                    else if (parts[4] == "000001F4")
-                    {
-                        HundredItems.Add("Ultima Weapon");
-                    }
-                    else if (parts[4] == "00000220")
-                    {
-                        HundredItems.Add("Winners Proof");
-                    }
-                    else if (parts[4] == "0000001A")
-                    {
-                        HundredItems.Add("Valor");
-                    }
-                    else if (parts[4] == "0000001F")
-                    {
-                        HundredItems.Add("Master");
-                    }
-                    else if (parts[4] == "0000001D")
-                    {
-                        HundredItems.Add("Final");
-                    }
-                    break;
                 }
             }
             for (int j = 0; j < Atlantica.Count; j++)
@@ -2394,111 +1009,10 @@ public class Pnach : MonoBehaviour
                 if (parts[2] == Atlantica[j])
                 {
                     AtlanticaCount++;
-                    if (parts[4] == "0000002A")
+                    if (keyItems.Contains(parts[4]))
                     {
-                        ATItems.Add("Oathkeeper");
+                        ATItems.Add(keyItemsNames[keyItems.IndexOf(parts[4])]);
                     }
-                    else if (parts[4] == "0000002B")
-                    {
-                        ATItems.Add("Oblivion");
-                    }
-                    else if (parts[4] == "000001E0")
-                    {
-                        ATItems.Add("Star Seeker");
-                    }
-                    else if (parts[4] == "000001E1")
-                    {
-                        ATItems.Add("Hidden Dragon");
-                    }
-                    else if (parts[4] == "000001E4")
-                    {
-                        ATItems.Add("Heros Crest");
-                    }
-                    else if (parts[4] == "000001E5")
-                    {
-                        ATItems.Add("Monochrome");
-                    }
-                    else if (parts[4] == "000001E6")
-                    {
-                        ATItems.Add("Follow the Wind");
-                    }
-                    else if (parts[4] == "000001E7")
-                    {
-                        ATItems.Add("Circle of Life");
-                    }
-                    else if (parts[4] == "000001E8")
-                    {
-                        ATItems.Add("Photon Debugger");
-                    }
-                    else if (parts[4] == "000001E9")
-                    {
-                        ATItems.Add("Gull Wing");
-                    }
-                    else if (parts[4] == "000001EA")
-                    {
-                        ATItems.Add("Rumbling Rose");
-                    }
-                    else if (parts[4] == "000001EB")
-                    {
-                        ATItems.Add("Guardian Soul");
-                    }
-                    else if (parts[4] == "000001EC")
-                    {
-                        ATItems.Add("Wishing Lamp");
-                    }
-                    else if (parts[4] == "000001ED")
-                    {
-                        ATItems.Add("Decisive Pumpkin");
-                    }
-                    else if (parts[4] == "000001EF")
-                    {
-                        ATItems.Add("Sweet Memories");
-                    }
-                    else if (parts[4] == "000001F0")
-                    {
-                        ATItems.Add("Mysterious Abyss");
-                    }
-                    else if (parts[4] == "000001EE")
-                    {
-                        ATItems.Add("Sleeping Lion");
-                    }
-                    else if (parts[4] == "000001F2")
-                    {
-                        ATItems.Add("Bond of Flame");
-                    }
-                    else if (parts[4] == "000001F1")
-                    {
-                        ATItems.Add("Fatal Crest");
-                    }
-                    else if (parts[4] == "0000021F")
-                    {
-                        ATItems.Add("Two Become One");
-                    }
-                    else if (parts[4] == "000001F3")
-                    {
-                        ATItems.Add("Fenrir");
-                    }
-                    else if (parts[4] == "000001F4")
-                    {
-                        ATItems.Add("Ultima Weapon");
-                    }
-                    else if (parts[4] == "00000220")
-                    {
-                        ATItems.Add("Winners Proof");
-                    }
-                    else if (parts[4] == "0000001A")
-                    {
-                        ATItems.Add("Valor");
-                    }
-                    else if (parts[4] == "0000001F")
-                    {
-                        ATItems.Add("Master");
-                    }
-                    else if (parts[4] == "0000001D")
-                    {
-                        ATItems.Add("Final");
-                    }
-                    break;
                 }
             }
             for (int j = 0; j < Levels.Count; j++)
@@ -2506,111 +1020,10 @@ public class Pnach : MonoBehaviour
                 if (parts[2] == Levels[j])
                 {
                     LevelsCount++;
-                    if (parts[4] == "0000002A")
+                    if (keyItems.Contains(parts[4]))
                     {
-                        LevelItems.Add("Oathkeeper");
+                        LevelItems.Add(keyItemsNames[keyItems.IndexOf(parts[4])]);
                     }
-                    else if (parts[4] == "0000002B")
-                    {
-                        LevelItems.Add("Oblivion");
-                    }
-                    else if (parts[4] == "000001E0")
-                    {
-                        LevelItems.Add("Star Seeker");
-                    }
-                    else if (parts[4] == "000001E1")
-                    {
-                        LevelItems.Add("Hidden Dragon");
-                    }
-                    else if (parts[4] == "000001E4")
-                    {
-                        LevelItems.Add("Heros Crest");
-                    }
-                    else if (parts[4] == "000001E5")
-                    {
-                        LevelItems.Add("Monochrome");
-                    }
-                    else if (parts[4] == "000001E6")
-                    {
-                        LevelItems.Add("Follow the Wind");
-                    }
-                    else if (parts[4] == "000001E7")
-                    {
-                        LevelItems.Add("Circle of Life");
-                    }
-                    else if (parts[4] == "000001E8")
-                    {
-                        LevelItems.Add("Photon Debugger");
-                    }
-                    else if (parts[4] == "000001E9")
-                    {
-                        LevelItems.Add("Gull Wing");
-                    }
-                    else if (parts[4] == "000001EA")
-                    {
-                        LevelItems.Add("Rumbling Rose");
-                    }
-                    else if (parts[4] == "000001EB")
-                    {
-                        LevelItems.Add("Guardian Soul");
-                    }
-                    else if (parts[4] == "000001EC")
-                    {
-                        LevelItems.Add("Wishing Lamp");
-                    }
-                    else if (parts[4] == "000001ED")
-                    {
-                        LevelItems.Add("Decisive Pumpkin");
-                    }
-                    else if (parts[4] == "000001EF")
-                    {
-                        LevelItems.Add("Sweet Memories");
-                    }
-                    else if (parts[4] == "000001F0")
-                    {
-                        LevelItems.Add("Mysterious Abyss");
-                    }
-                    else if (parts[4] == "000001EE")
-                    {
-                        LevelItems.Add("Sleeping Lion");
-                    }
-                    else if (parts[4] == "000001F2")
-                    {
-                        LevelItems.Add("Bond of Flame");
-                    }
-                    else if (parts[4] == "000001F1")
-                    {
-                        LevelItems.Add("Fatal Crest");
-                    }
-                    else if (parts[4] == "0000021F")
-                    {
-                        LevelItems.Add("Two Become One");
-                    }
-                    else if (parts[4] == "000001F3")
-                    {
-                        LevelItems.Add("Fenrir");
-                    }
-                    else if (parts[4] == "000001F4")
-                    {
-                        LevelItems.Add("Ultima Weapon");
-                    }
-                    else if (parts[4] == "00000220")
-                    {
-                        LevelItems.Add("Winners Proof");
-                    }
-                    else if (parts[4] == "0000001A")
-                    {
-                        LevelItems.Add("Valor");
-                    }
-                    else if (parts[4] == "0000001F")
-                    {
-                        LevelItems.Add("Master");
-                    }
-                    else if (parts[4] == "0000001D")
-                    {
-                        LevelItems.Add("Final");
-                    }
-                    break;
                 }
             }
             for (int j = 0; j < Forms.Count; j++)
@@ -2618,111 +1031,10 @@ public class Pnach : MonoBehaviour
                 if (parts[2] == Forms[j])
                 {
                     FormsCount++;
-                    if (parts[4] == "0000002A")
+                    if (keyItems.Contains(parts[4]))
                     {
-                        FormItems.Add("Oathkeeper");
+                        FormItems.Add(keyItemsNames[keyItems.IndexOf(parts[4])]);
                     }
-                    else if (parts[4] == "0000002B")
-                    {
-                        FormItems.Add("Oblivion");
-                    }
-                    else if (parts[4] == "000001E0")
-                    {
-                        FormItems.Add("Star Seeker");
-                    }
-                    else if (parts[4] == "000001E1")
-                    {
-                        FormItems.Add("Hidden Dragon");
-                    }
-                    else if (parts[4] == "000001E4")
-                    {
-                        FormItems.Add("Heros Crest");
-                    }
-                    else if (parts[4] == "000001E5")
-                    {
-                        FormItems.Add("Monochrome");
-                    }
-                    else if (parts[4] == "000001E6")
-                    {
-                        FormItems.Add("Follow the Wind");
-                    }
-                    else if (parts[4] == "000001E7")
-                    {
-                        FormItems.Add("Circle of Life");
-                    }
-                    else if (parts[4] == "000001E8")
-                    {
-                        FormItems.Add("Photon Debugger");
-                    }
-                    else if (parts[4] == "000001E9")
-                    {
-                        FormItems.Add("Gull Wing");
-                    }
-                    else if (parts[4] == "000001EA")
-                    {
-                        FormItems.Add("Rumbling Rose");
-                    }
-                    else if (parts[4] == "000001EB")
-                    {
-                        FormItems.Add("Guardian Soul");
-                    }
-                    else if (parts[4] == "000001EC")
-                    {
-                        FormItems.Add("Wishing Lamp");
-                    }
-                    else if (parts[4] == "000001ED")
-                    {
-                        FormItems.Add("Decisive Pumpkin");
-                    }
-                    else if (parts[4] == "000001EF")
-                    {
-                        FormItems.Add("Sweet Memories");
-                    }
-                    else if (parts[4] == "000001F0")
-                    {
-                        FormItems.Add("Mysterious Abyss");
-                    }
-                    else if (parts[4] == "000001EE")
-                    {
-                        FormItems.Add("Sleeping Lion");
-                    }
-                    else if (parts[4] == "000001F2")
-                    {
-                        FormItems.Add("Bond of Flame");
-                    }
-                    else if (parts[4] == "000001F1")
-                    {
-                        FormItems.Add("Fatal Crest");
-                    }
-                    else if (parts[4] == "0000021F")
-                    {
-                        FormItems.Add("Two Become One");
-                    }
-                    else if (parts[4] == "000001F3")
-                    {
-                        FormItems.Add("Fenrir");
-                    }
-                    else if (parts[4] == "000001F4")
-                    {
-                        FormItems.Add("Ultima Weapon");
-                    }
-                    else if (parts[4] == "00000220")
-                    {
-                        FormItems.Add("Winners Proof");
-                    }
-                    else if (parts[4] == "0000001A")
-                    {
-                        FormItems.Add("Valor");
-                    }
-                    else if (parts[4] == "0000001F")
-                    {
-                        FormItems.Add("Master");
-                    }
-                    else if (parts[4] == "0000001D")
-                    {
-                        FormItems.Add("Final");
-                    }
-                    break;
                 }
             }
 
