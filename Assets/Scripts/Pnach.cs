@@ -754,6 +754,7 @@ public class Pnach : MonoBehaviour
     string pnachpath2;
     string pnachpath3;
     public bool read = false;
+    public bool doneread = false;
 
     // Start is called before the first frame update
     void Start()
@@ -1066,6 +1067,7 @@ public class Pnach : MonoBehaviour
         //{
         //    Debug.Log(OCItems[i]);
         //}
+        doneread = true;
 
     }
 }

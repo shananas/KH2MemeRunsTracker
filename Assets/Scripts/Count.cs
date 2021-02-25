@@ -39,6 +39,9 @@ public class Count : MonoBehaviour
     GameObject canvas;
     [SerializeField]
     Items item;
+    [SerializeField]
+    public TextMeshProUGUI total;
+    public int totalnumber;
 
     private void Start()
     {
@@ -233,6 +236,9 @@ public class Count : MonoBehaviour
                 number = int.Parse(text.text);
                 number++;
                 text.text = number.ToString();
+                totalnumber = int.Parse(total.text);
+                totalnumber++;
+                total.text = totalnumber.ToString();
                 if (number == STTCount)
                 {
                     checks.gameObject.SetActive(true);
@@ -246,6 +252,9 @@ public class Count : MonoBehaviour
                 number = int.Parse(text.text);
                 number++;
                 text.text = number.ToString();
+                totalnumber = int.Parse(total.text);
+                totalnumber++;
+                total.text = totalnumber.ToString();
                 if (number == hundredacreCount)
                 {
                     checks.gameObject.SetActive(true);
@@ -259,6 +268,9 @@ public class Count : MonoBehaviour
                 number = int.Parse(text.text);
                 number++;
                 text.text = number.ToString();
+                totalnumber = int.Parse(total.text);
+                totalnumber++;
+                total.text = totalnumber.ToString();
                 if (number == AGCount)
                 {
                     checks.gameObject.SetActive(true);
@@ -272,6 +284,9 @@ public class Count : MonoBehaviour
                 number = int.Parse(text.text);
                 number++;
                 text.text = number.ToString();
+                totalnumber = int.Parse(total.text);
+                totalnumber++;
+                total.text = totalnumber.ToString();
                 if (number == AtlanticaCount)
                 {
                     checks.gameObject.SetActive(true);
@@ -285,6 +300,9 @@ public class Count : MonoBehaviour
                 number = int.Parse(text.text);
                 number++;
                 text.text = number.ToString();
+                totalnumber = int.Parse(total.text);
+                totalnumber++;
+                total.text = totalnumber.ToString();
                 if (number == BCCount)
                 {
                     checks.gameObject.SetActive(true);
@@ -298,6 +316,9 @@ public class Count : MonoBehaviour
                 number = int.Parse(text.text);
                 number++;
                 text.text = number.ToString();
+                totalnumber = int.Parse(total.text);
+                totalnumber++;
+                total.text = totalnumber.ToString();
                 if (number == DCCount)
                 {
                     checks.gameObject.SetActive(true);
@@ -311,6 +332,9 @@ public class Count : MonoBehaviour
                 number = int.Parse(text.text);
                 number++;
                 text.text = number.ToString();
+                totalnumber = int.Parse(total.text);
+                totalnumber++;
+                total.text = totalnumber.ToString();
                 if (number == FormsCount)
                 {
                     checks.gameObject.SetActive(true);
@@ -324,6 +348,9 @@ public class Count : MonoBehaviour
                 number = int.Parse(text.text);
                 number++;
                 text.text = number.ToString();
+                totalnumber = int.Parse(total.text);
+                totalnumber++;
+                total.text = totalnumber.ToString();
                 if (number == HTCount)
                 {
                     checks.gameObject.SetActive(true);
@@ -337,6 +364,9 @@ public class Count : MonoBehaviour
                 number = int.Parse(text.text);
                 number++;
                 text.text = number.ToString();
+                totalnumber = int.Parse(total.text);
+                totalnumber++;
+                total.text = totalnumber.ToString();
                 if (number == HBCount)
                 {
                     checks.gameObject.SetActive(true);
@@ -350,6 +380,9 @@ public class Count : MonoBehaviour
                 number = int.Parse(text.text);
                 number++;
                 text.text = number.ToString();
+                totalnumber = int.Parse(total.text);
+                totalnumber++;
+                total.text = totalnumber.ToString();
                 if (number == PRCount)
                 {
                     checks.gameObject.SetActive(true);
@@ -363,6 +396,9 @@ public class Count : MonoBehaviour
                 number = int.Parse(text.text);
                 number++;
                 text.text = number.ToString();
+                totalnumber = int.Parse(total.text);
+                totalnumber++;
+                total.text = totalnumber.ToString();
                 if (number == PLCount)
                 {
                     checks.gameObject.SetActive(true);
@@ -376,6 +412,9 @@ public class Count : MonoBehaviour
                 number = int.Parse(text.text);
                 number++;
                 text.text = number.ToString();
+                totalnumber = int.Parse(total.text);
+                totalnumber++;
+                total.text = totalnumber.ToString();
                 if (number == LevelsCount)
                 {
                     checks.gameObject.SetActive(true);
@@ -389,6 +428,9 @@ public class Count : MonoBehaviour
                 number = int.Parse(text.text);
                 number++;
                 text.text = number.ToString();
+                totalnumber = int.Parse(total.text);
+                totalnumber++;
+                total.text = totalnumber.ToString();
                 if (number == SPCount)
                 {
                     checks.gameObject.SetActive(true);
@@ -402,6 +444,9 @@ public class Count : MonoBehaviour
                 number = int.Parse(text.text);
                 number++;
                 text.text = number.ToString();
+                totalnumber = int.Parse(total.text);
+                totalnumber++;
+                total.text = totalnumber.ToString();
                 if (number == TWTNWCount)
                 {
                     checks.gameObject.SetActive(true);
@@ -415,6 +460,9 @@ public class Count : MonoBehaviour
                 number = int.Parse(text.text);
                 number++;
                 text.text = number.ToString();
+                totalnumber = int.Parse(total.text);
+                totalnumber++;
+                total.text = totalnumber.ToString();
                 if (number == OCCount)
                 {
                     checks.gameObject.SetActive(true);
@@ -428,6 +476,9 @@ public class Count : MonoBehaviour
                 number = int.Parse(text.text);
                 number++;
                 text.text = number.ToString();
+                totalnumber = int.Parse(total.text);
+                totalnumber++;
+                total.text = totalnumber.ToString();
                 if (number == TTCount)
                 {
                     checks.gameObject.SetActive(true);
@@ -441,11 +492,21 @@ public class Count : MonoBehaviour
                 number = int.Parse(text.text);
                 number++;
                 text.text = number.ToString();
+                totalnumber = int.Parse(total.text);
+                totalnumber++;
+                total.text = totalnumber.ToString();
                 if (number == LoDCount)
                 {
                     checks.gameObject.SetActive(true);
                 }
             }
+        }
+        else if (thing.gameObject.name == "Total")
+        {
+            totalnumber = int.Parse(total.text);
+            totalnumber++;
+            total.text = totalnumber.ToString();
+
         }
         because = false;
     }
