@@ -11,7 +11,19 @@ public class CountTotal : MonoBehaviour
     public GameObject thing;
     [SerializeField]
     public TextMeshProUGUI total;
-    public int totalnumber;   
+    public int totalnumber;
+    [SerializeField]
+    Count count;
+    bool hmmm = false;
+
+    private void Update()
+    {
+        if (count.fuck && !hmmm)
+        {
+            totalnumber = int.Parse(total.text);
+        }
+    }
+
 
     public void Plus()
     {

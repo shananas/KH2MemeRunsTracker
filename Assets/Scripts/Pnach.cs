@@ -22,6 +22,7 @@ public class Pnach : MonoBehaviour
     int TWTNWCount = 0;
     int FormsCount = 0;
     int LevelsCount = 0;
+    int FreeCount = 0;
     List<string> keyItems = new List<string>
     {
         "0000002A",
@@ -49,7 +50,7 @@ public class Pnach : MonoBehaviour
         "00000220",
         "0000001A",
         "0000001F",
-        "0000001D"
+        "0000001D",
     };
     List<string> keyItemsNames = new List<string>
     {
@@ -78,7 +79,21 @@ public class Pnach : MonoBehaviour
         "Winners Proof",
         "Valor",
         "Master",
-        "Final"
+        "Final",
+    };
+    List<string> extraForms = new List<string>
+    {
+        "0000001B",
+        "00000233"        
+    };
+    List<string> extraFormsNames = new List<string>
+    {        
+        "Wisdom",
+        "Limit",
+    };
+    List<string> pages = new List<string>
+    {
+        "00000020"
     };
     List<string> Free = new List<string>
     {
@@ -93,6 +108,7 @@ public class Pnach : MonoBehaviour
         "11D18DE0",
         "11D18DE2"
     };
+    List<string> Freeitems = new List<string>();
     List<string> STT = new List<string>
     {   "11CE016E",
         "11CE017A",
@@ -123,6 +139,7 @@ public class Pnach : MonoBehaviour
         "11CE0B0A" //data roxas
     };
     public List<string> STTItems = new List<string>();
+    public List<string> STTPages = new List<string>();
     List<string> TT = new List<string>
     {
         "11CE022E",
@@ -178,6 +195,7 @@ public class Pnach : MonoBehaviour
         "11CE0ACE" //data axel
     };
     public List<string> TTItems = new List<string>();
+    public List<string> TTPages = new List<string>();
     List<string> HB = new List<string>
     {
         "11CDFF3A",
@@ -243,6 +261,7 @@ public class Pnach : MonoBehaviour
         "11CE05D6"
     };
     public List<string> HBItems = new List<string>();
+    public List<string> HBPages = new List<string>();
     List<string> LoD = new List<string>
     {
         "11CDF72A",
@@ -276,6 +295,7 @@ public class Pnach : MonoBehaviour
         "11CE0AE6" //data xigbar
     };
     public List<string> LoDItems = new List<string>();
+    public List<string> LoDPages = new List<string>();
     List<string> BC = new List<string>
     {
         "11CDFBF2",
@@ -309,6 +329,7 @@ public class Pnach : MonoBehaviour
         "11CE0AC2" //data xaldin
     };
     public List<string> BCItems = new List<string>();
+    public List<string> BCPages = new List<string>();
     List<string> OC = new List<string>
     {
         "11CDFB02",
@@ -355,6 +376,7 @@ public class Pnach : MonoBehaviour
         "11CE0A92" //data zexion
     };
     public List<string> OCItems = new List<string>();
+    public List<string> OCPages = new List<string>();
     List<string> DC = new List<string> 
     {
         "11CDF9B2",
@@ -385,6 +407,7 @@ public class Pnach : MonoBehaviour
         "11CE0AAA" //data marluxia
     };
     public List<string> DCItems = new List<string>();
+    public List<string> DCPages = new List<string>();
     List<string> PR = new List<string> 
     {
         "11CDFE3E",
@@ -420,6 +443,7 @@ public class Pnach : MonoBehaviour
         "11CE0AFE" //data luxord
     };
     public List<string> PRItems = new List<string>();
+    public List<string> PRPages = new List<string>();
     List<string> AG = new List<string>
     {
         "11CDF826",
@@ -458,6 +482,7 @@ public class Pnach : MonoBehaviour
         "11CE0A86" //data lexaeus
     };
     public List<string> AGItems = new List<string>();
+    public List<string> AGPages = new List<string>();
     List<string> HT = new List<string>
     {
         "11CDFD96",
@@ -483,6 +508,7 @@ public class Pnach : MonoBehaviour
         "11CE0A7A" //data vexen
     };
     public List<string> HTItems = new List<string>();
+    public List<string> HTPages = new List<string>();
     List<string> PL = new List<string>
     {
         "11CE0042",
@@ -516,6 +542,7 @@ public class Pnach : MonoBehaviour
         "11CE0AF2" //data saix
     };
     public List<string> PLItems = new List<string>();
+    public List<string> PLPages = new List<string>();
     List<string> Atlantica = new List<string>
     {
         "11CE0846",
@@ -524,6 +551,7 @@ public class Pnach : MonoBehaviour
         "11CE08FA"
     };
     public List<string> ATItems = new List<string>();
+    public List<string> ATPages = new List<string>();
     List<string> hundredacre = new List<string>
     {
         "11CDFA12",
@@ -552,6 +580,7 @@ public class Pnach : MonoBehaviour
         "11CE092A"
     };
     public List<string> HundredItems = new List<string>();
+    public List<string> HundredPages = new List<string>();
     List<string> SP = new List<string>
     {
         "11CDFCEE",
@@ -576,6 +605,7 @@ public class Pnach : MonoBehaviour
         "11CE0A9E" //data larxene
     };
     public List<string> SPItems = new List<string>();
+    public List<string> SPPages = new List<string>();
     List<string> TWTNW = new List<string>
     {
         "11CE0402",
@@ -611,6 +641,7 @@ public class Pnach : MonoBehaviour
         "11CE0ADA" //data xemnas
     };
     public List<string> TWTNWItems = new List<string>();
+    public List<string> TWTNWPages = new List<string>();
     List<string> Forms = new List<string>
     {
         "11D1A22E", //valor
@@ -645,6 +676,7 @@ public class Pnach : MonoBehaviour
         "11D1A336"
     };
     public List<string> FormItems = new List<string>();
+    public List<string> FormPages = new List<string>();
     List<string> Levels = new List<string>
     {
         "11D0B6C0", //Lvl 2
@@ -748,13 +780,18 @@ public class Pnach : MonoBehaviour
         "11D0BCD0"
     };
     public List<string> LevelItems = new List<string>();
+    public List<string> LevelPages = new List<string>();
     List<string> importantchecks = new List<string>();
+    List<string> formchecks = new List<string>();
+    List<string> pageschecks = new List<string>();
     string pnachpath;
     string hintpath;
     string pnachpath2;
     string pnachpath3;
     public bool read = false;
     public bool doneread = false;
+    public string wisdom;
+    public string limit;
 
     // Start is called before the first frame update
     void Start()
@@ -844,8 +881,7 @@ public class Pnach : MonoBehaviour
                 }
             } while (!sr.EndOfStream);
             sr.Close();
-        }
-
+        }              
 
 
         for (int i = 0; i < importantchecks.Count; i++)
@@ -1038,10 +1074,579 @@ public class Pnach : MonoBehaviour
                     }
                 }
             }
+            for (int j = 0; j < Free.Count; j++)
+            {
+                if (parts[2] == Free[j])
+                {
+                    FreeCount++;
+                    if (keyItems.Contains(parts[4]))
+                    {
+                        Freeitems.Add(keyItemsNames[keyItems.IndexOf(parts[4])]);
+                    }
+                }
+            }
 
         }
 
+        if (FormsCount > 0)
+        {
+            if (File.Exists(pnachpath))
+            {
+                StreamReader sr = new StreamReader(pnachpath);
+                string line;
+                do
+                {
+                    line = sr.ReadLine();
+                    string[] parts = line.Split(new[] { ',' });
+                    if (parts.Length == 5)
+                    {
+                        for (int i = 0; i < extraForms.Count; i++)
+                        {
+                            if (parts[4] == extraForms[i])
+                            {
+                                formchecks.Add(line);
+                            }
+                        }
+                    }
 
+                } while (!sr.EndOfStream);
+                sr.Close();
+            }
+            else if (File.Exists(pnachpath2))
+            {
+                StreamReader sr = new StreamReader(pnachpath2);
+                string line;
+                do
+                {
+                    line = sr.ReadLine();
+                    string[] parts = line.Split(new[] { ',' });
+                    if (parts.Length == 5)
+                    {
+                        for (int i = 0; i < extraForms.Count; i++)
+                        {
+                            if (parts[4] == extraForms[i])
+                            {
+                                formchecks.Add(line);
+                            }
+                        }
+                    }
+                } while (!sr.EndOfStream);
+                sr.Close();
+            }
+            else if (File.Exists(pnachpath3))
+            {
+                StreamReader sr = new StreamReader(pnachpath3);
+                string line;
+                do
+                {
+                    line = sr.ReadLine();
+                    string[] parts = line.Split(new[] { ',' });
+                    if (parts.Length == 5)
+                    {
+                        for (int i = 0; i < extraForms.Count; i++)
+                        {
+                            if (parts[4] == extraForms[i])
+                            {
+                                formchecks.Add(line);
+                            }
+                        }
+                    }
+                } while (!sr.EndOfStream);
+                sr.Close();
+            }
+
+            for (int i = 0; i < formchecks.Count; i++)
+            {
+                string[] parts = formchecks[i].Split(new[] { ',' });
+                for (int j = 0; j < STT.Count; j++)
+                {
+                    if (parts[2] == STT[j])
+                    {
+                        if (extraForms.Contains(parts[4]))
+                        {
+                            if (extraFormsNames[extraForms.IndexOf(parts[4])] == "Wisdom")
+                            {
+                                wisdom = "STT";
+                            }
+                            else if (extraFormsNames[extraForms.IndexOf(parts[4])] == "Limit")
+                            {
+                                limit = "STT";
+                            }
+                        }
+                    }
+                }
+                for (int j = 0; j < TT.Count; j++)
+                {
+                    if (parts[2] == TT[j])
+                    {
+                        if (extraFormsNames[extraForms.IndexOf(parts[4])] == "Wisdom")
+                        {
+                            wisdom = "STT";
+                        }
+                        else if (extraFormsNames[extraForms.IndexOf(parts[4])] == "Limit")
+                        {
+                            limit = "STT";
+                        }
+                    }
+                }
+                for (int j = 0; j < HB.Count; j++)
+                {
+                    if (parts[2] == HB[j])
+                    {
+                        if (extraFormsNames[extraForms.IndexOf(parts[4])] == "Wisdom")
+                        {
+                            wisdom = "HB";
+                        }
+                        else if (extraFormsNames[extraForms.IndexOf(parts[4])] == "Limit")
+                        {
+                            limit = "HB";
+                        }
+                    }
+                }
+                for (int j = 0; j < HT.Count; j++)
+                {
+                    if (parts[2] == HT[j])
+                    {
+                        if (extraFormsNames[extraForms.IndexOf(parts[4])] == "Wisdom")
+                        {
+                            wisdom = "HT";
+                        }
+                        else if (extraFormsNames[extraForms.IndexOf(parts[4])] == "Limit")
+                        {
+                            limit = "HT";
+                        }
+                    }
+                }
+                for (int j = 0; j < SP.Count; j++)
+                {
+                    if (parts[2] == SP[j])
+                    {
+                        if (extraFormsNames[extraForms.IndexOf(parts[4])] == "Wisdom")
+                        {
+                            wisdom = "SP";
+                        }
+                        else if (extraFormsNames[extraForms.IndexOf(parts[4])] == "Limit")
+                        {
+                            limit = "SP";
+                        }
+                    }
+                }
+                for (int j = 0; j < PR.Count; j++)
+                {
+                    if (parts[2] == PR[j])
+                    {
+                        if (extraFormsNames[extraForms.IndexOf(parts[4])] == "Wisdom")
+                        {
+                            wisdom = "PR";
+                        }
+                        else if (extraFormsNames[extraForms.IndexOf(parts[4])] == "Limit")
+                        {
+                            limit = "PR";
+                        }
+                    }
+                }
+                for (int j = 0; j < OC.Count; j++)
+                {
+                    if (parts[2] == OC[j])
+                    {
+                        if (extraFormsNames[extraForms.IndexOf(parts[4])] == "Wisdom")
+                        {
+                            wisdom = "OC";
+                        }
+                        else if (extraFormsNames[extraForms.IndexOf(parts[4])] == "Limit")
+                        {
+                            limit = "OC";
+                        }
+                    }
+                }
+                for (int j = 0; j < LoD.Count; j++)
+                {
+                    if (parts[2] == LoD[j])
+                    {
+                        if (extraFormsNames[extraForms.IndexOf(parts[4])] == "Wisdom")
+                        {
+                            wisdom = "LoD";
+                        }
+                        else if (extraFormsNames[extraForms.IndexOf(parts[4])] == "Limit")
+                        {
+                            limit = "LoD";
+                        }
+                    }
+                }
+                for (int j = 0; j < TWTNW.Count; j++)
+                {
+                    if (parts[2] == TWTNW[j])
+                    {
+                        if (extraFormsNames[extraForms.IndexOf(parts[4])] == "Wisdom")
+                        {
+                            wisdom = "TWTNW";
+                        }
+                        else if (extraFormsNames[extraForms.IndexOf(parts[4])] == "Limit")
+                        {
+                            limit = "TWTNW";
+                        }
+                    }
+                }
+                for (int j = 0; j < BC.Count; j++)
+                {
+                    if (parts[2] == BC[j])
+                    {
+                        if (extraFormsNames[extraForms.IndexOf(parts[4])] == "Wisdom")
+                        {
+                            wisdom = "BC";
+                        }
+                        else if (extraFormsNames[extraForms.IndexOf(parts[4])] == "Limit")
+                        {
+                            limit = "BC";
+                        }
+                    }
+                }
+                for (int j = 0; j < AG.Count; j++)
+                {
+                    if (parts[2] == AG[j])
+                    {
+                        if (extraFormsNames[extraForms.IndexOf(parts[4])] == "Wisdom")
+                        {
+                            wisdom = "AG";
+                        }
+                        else if (extraFormsNames[extraForms.IndexOf(parts[4])] == "Limit")
+                        {
+                            limit = "AG";
+                        }
+                    }
+                }
+                for (int j = 0; j < PL.Count; j++)
+                {
+                    if (parts[2] == PL[j])
+                    {
+                        if (extraFormsNames[extraForms.IndexOf(parts[4])] == "Wisdom")
+                        {
+                            wisdom = "PL";
+                        }
+                        else if (extraFormsNames[extraForms.IndexOf(parts[4])] == "Limit")
+                        {
+                            limit = "PL";
+                        }
+                    }
+                }
+                for (int j = 0; j < DC.Count; j++)
+                {
+                    if (parts[2] == DC[j])
+                    {
+                        if (extraFormsNames[extraForms.IndexOf(parts[4])] == "Wisdom")
+                        {
+                            wisdom = "DC";
+                        }
+                        else if (extraFormsNames[extraForms.IndexOf(parts[4])] == "Limit")
+                        {
+                            limit = "DC";
+                        }
+                    }
+                }
+                for (int j = 0; j < hundredacre.Count; j++)
+                {
+                    if (parts[2] == hundredacre[j])
+                    {
+                        if (extraFormsNames[extraForms.IndexOf(parts[4])] == "Wisdom")
+                        {
+                            wisdom = "100";
+                        }
+                        else if (extraFormsNames[extraForms.IndexOf(parts[4])] == "Limit")
+                        {
+                            limit = "100";
+                        }
+                    }
+                }
+                for (int j = 0; j < Atlantica.Count; j++)
+                {
+                    if (parts[2] == Atlantica[j])
+                    {
+                        if (extraFormsNames[extraForms.IndexOf(parts[4])] == "Wisdom")
+                        {
+                            wisdom = "AT";
+                        }
+                        else if (extraFormsNames[extraForms.IndexOf(parts[4])] == "Limit")
+                        {
+                            limit = "AT";
+                        }
+                    }
+                }
+                for (int j = 0; j < Levels.Count; j++)
+                {
+                    if (parts[2] == Levels[j])
+                    {
+                        if (extraFormsNames[extraForms.IndexOf(parts[4])] == "Wisdom")
+                        {
+                            wisdom = "Level";
+                        }
+                        else if (extraFormsNames[extraForms.IndexOf(parts[4])] == "Limit")
+                        {
+                            limit = "Level";
+                        }
+                    }
+                }                
+            }
+        }
+
+        if (hundredacreCount > 0)
+        {
+            if (File.Exists(pnachpath))
+            {
+                StreamReader sr = new StreamReader(pnachpath);
+                string line;
+                do
+                {
+                    line = sr.ReadLine();
+                    string[] parts = line.Split(new[] { ',' });
+                    if (parts.Length == 5)
+                    {
+                        for (int i = 0; i < pages.Count; i++)
+                        {
+                            if (parts[4] == pages[i])
+                            {
+                                pageschecks.Add(line);
+                            }
+                        }
+                    }
+
+                } while (!sr.EndOfStream);
+                sr.Close();
+            }
+            else if (File.Exists(pnachpath2))
+            {
+                StreamReader sr = new StreamReader(pnachpath2);
+                string line;
+                do
+                {
+                    line = sr.ReadLine();
+                    string[] parts = line.Split(new[] { ',' });
+                    if (parts.Length == 5)
+                    {
+                        for (int i = 0; i < pages.Count; i++)
+                        {
+                            if (parts[4] == pages[i])
+                            {
+                                pageschecks.Add(line);
+                            }
+                        }
+                    }
+                } while (!sr.EndOfStream);
+                sr.Close();
+            }
+            else if (File.Exists(pnachpath3))
+            {
+                StreamReader sr = new StreamReader(pnachpath3);
+                string line;
+                do
+                {
+                    line = sr.ReadLine();
+                    string[] parts = line.Split(new[] { ',' });
+                    if (parts.Length == 5)
+                    {
+                        for (int i = 0; i < pages.Count; i++)
+                        {
+                            if (parts[4] == pages[i])
+                            {
+                                pageschecks.Add(line);
+                            }
+                        }
+                    }
+                } while (!sr.EndOfStream);
+                sr.Close();
+            }
+
+            for (int i = 0; i < pageschecks.Count; i++)
+            {
+                string[] parts = pageschecks[i].Split(new[] { ',' });
+                for (int j = 0; j < STT.Count; j++)
+                {
+                    if (parts[2] == STT[j])
+                    {
+                       
+                        if (pages.Contains(parts[4]))
+                        {
+                            STTPages.Add("Pages");
+                        }
+                    }
+                }
+                for (int j = 0; j < TT.Count; j++)
+                {
+                    if (parts[2] == TT[j])
+                    {
+                       
+                        if (pages.Contains(parts[4]))
+                        {
+                            TTPages.Add("Pages");
+                        }
+                    }
+                }
+                for (int j = 0; j < HB.Count; j++)
+                {
+                    if (parts[2] == HB[j])
+                    {
+                        
+                        if (pages.Contains(parts[4]))
+                        {
+                            HBPages.Add("Pages");
+                        }
+                    }
+                }
+                for (int j = 0; j < HT.Count; j++)
+                {
+                    if (parts[2] == HT[j])
+                    {
+                        
+                        if (pages.Contains(parts[4]))
+                        {
+                            HTPages.Add("Pages");
+                        }
+                    }
+                }
+                for (int j = 0; j < SP.Count; j++)
+                {
+                    if (parts[2] == SP[j])
+                    {
+                        
+                        if (pages.Contains(parts[4]))
+                        {
+                            SPPages.Add("Pages");
+                        }
+                    }
+                }
+                for (int j = 0; j < PR.Count; j++)
+                {
+                    if (parts[2] == PR[j])
+                    {
+                        
+                        if (pages.Contains(parts[4]))
+                        {
+                            PRPages.Add("Pages");
+                        }
+                    }
+                }
+                for (int j = 0; j < OC.Count; j++)
+                {
+                    if (parts[2] == OC[j])
+                    {
+                       
+                        if (pages.Contains(parts[4]))
+                        {
+                            OCPages.Add("Pages");
+                        }
+                    }
+                }
+                for (int j = 0; j < LoD.Count; j++)
+                {
+                    if (parts[2] == LoD[j])
+                    {
+                       
+                        if (pages.Contains(parts[4]))
+                        {
+                            LoDPages.Add("Pages");
+                        }
+                    }
+                }
+                for (int j = 0; j < TWTNW.Count; j++)
+                {
+                    if (parts[2] == TWTNW[j])
+                    {
+                       
+                        if (pages.Contains(parts[4]))
+                        {
+                            TWTNWPages.Add("Pages");
+                        }
+                    }
+                }
+                for (int j = 0; j < BC.Count; j++)
+                {
+                    if (parts[2] == BC[j])
+                    {
+                        
+                        if (pages.Contains(parts[4]))
+                        {
+                            BCPages.Add("Pages");
+                        }
+                    }
+                }
+                for (int j = 0; j < AG.Count; j++)
+                {
+                    if (parts[2] == AG[j])
+                    {
+                       
+                        if (pages.Contains(parts[4]))
+                        {
+                            AGPages.Add("Pages");
+                        }
+                    }
+                }
+                for (int j = 0; j < PL.Count; j++)
+                {
+                    if (parts[2] == PL[j])
+                    {
+                       
+                        if (pages.Contains(parts[4]))
+                        {
+                            PLPages.Add("Pages");
+                        }
+                    }
+                }
+                for (int j = 0; j < DC.Count; j++)
+                {
+                    if (parts[2] == DC[j])
+                    {
+                       
+                        if (pages.Contains(parts[4]))
+                        {
+                            DCPages.Add("Pages");
+                        }
+                    }
+                }
+                for (int j = 0; j < hundredacre.Count; j++)
+                {
+                    if (parts[2] == hundredacre[j])
+                    {
+                      
+                        if (pages.Contains(parts[4]))
+                        {
+                            HundredPages.Add("Pages");
+                        }
+                    }
+                }
+                for (int j = 0; j < Atlantica.Count; j++)
+                {
+                    if (parts[2] == Atlantica[j])
+                    {
+                       
+                        if (pages.Contains(parts[4]))
+                        {
+                            ATPages.Add("Pages");
+                        }
+                    }
+                }
+                for (int j = 0; j < Levels.Count; j++)
+                {
+                    if (parts[2] == Levels[j])
+                    {
+                       
+                        if (pages.Contains(parts[4]))
+                        {
+                            LevelPages.Add("Pages");
+                        }
+                    }
+                }
+                for (int j = 0; j < Forms.Count; j++)
+                {
+                    if (parts[2] == Forms[j])
+                    {
+                        
+                        if (pages.Contains(parts[4]))
+                        {
+                            FormPages.Add("Pages");
+                        }
+                    }
+                }
+            }
+        }       
 
         StreamWriter sw = new StreamWriter(hintpath);
         sw.WriteLine(STTCount); //STT
@@ -1061,6 +1666,7 @@ public class Pnach : MonoBehaviour
         sw.WriteLine(hundredacreCount); //100acre
         sw.WriteLine(LevelsCount); //level
         sw.WriteLine(FormsCount); //forms
+        sw.WriteLine(FreeCount); //Free
         sw.WriteLine("Total Count " + (STTCount + DCCount + HBCount + PLCount + AGCount + BCCount + TWTNWCount + LoDCount + HTCount + OCCount + TTCount + PRCount + SPCount + AtlanticaCount + hundredacreCount + LevelsCount + FormsCount));
         sw.Close();
         //for (int i = 0; i < OCItems.Count; i++)

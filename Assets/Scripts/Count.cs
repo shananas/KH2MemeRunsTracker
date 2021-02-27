@@ -29,6 +29,7 @@ public class Count : MonoBehaviour
     public int TWTNWCount = 0;
     public int FormsCount = 0;
     public int LevelsCount = 0;
+    public int FreeCount = 0;
     [SerializeField]
     public Pnach done;
     bool why = false;
@@ -42,6 +43,13 @@ public class Count : MonoBehaviour
     [SerializeField]
     public TextMeshProUGUI total;
     public int totalnumber;
+    public bool fuck = false;
+    [SerializeField]
+    GameObject wisdom;
+    [SerializeField]
+    GameObject limit;
+    [SerializeField]
+    GameObject pages;
 
     private void Start()
     {
@@ -146,6 +154,11 @@ public class Count : MonoBehaviour
                     FormsCount = int.Parse(line);
                     linecount++;
                 }
+                else if (linecount == 17)
+                {
+                    FreeCount = int.Parse(line);
+                    linecount++;
+                }
 
             } while (!sr.EndOfStream);
             sr.Close();
@@ -220,7 +233,273 @@ public class Count : MonoBehaviour
                 if (thing.gameObject.name == "Land of Dragons" && LoDCount == 0)
                 {
                     checks.gameObject.SetActive(true);
-                }  
+                }
+
+                if (thing.gameObject.name == "STT")
+                {
+                    if (done.wisdom == "STT")
+                    {
+                        wisdom.gameObject.SetActive(true);
+                    }
+                    if (done.limit == "STT")
+                    {
+                        limit.gameObject.SetActive(true);
+                    }
+                    if (done.STTPages.Count > 0)
+                    {
+                        pages.gameObject.SetActive(true);
+                    }
+                }
+                if (thing.gameObject.name == "100 Acre")
+                {
+                    if (done.wisdom == "100")
+                    {
+                        wisdom.gameObject.SetActive(true);
+                    }
+                    if (done.limit == "100")
+                    {
+                        limit.gameObject.SetActive(true);
+                    }
+                    if (done.HundredPages.Count > 0)
+                    {
+                        pages.gameObject.SetActive(true);
+                    }
+                }
+                if (thing.gameObject.name == "Agrabah")
+                {
+                    if (done.wisdom == "AG")
+                    {
+                        wisdom.gameObject.SetActive(true);
+                    }
+                    if (done.limit == "AG")
+                    {
+                        limit.gameObject.SetActive(true);
+                    }
+                    if (done.AGPages.Count > 0)
+                    {
+                        pages.gameObject.SetActive(true);
+                    }
+                }
+                if (thing.gameObject.name == "Atlantica")
+                {
+                    if (done.wisdom == "AT")
+                    {
+                        wisdom.gameObject.SetActive(true);
+                    }
+                    if (done.limit == "AT")
+                    {
+                        limit.gameObject.SetActive(true);
+                    }
+                    if (done.ATPages.Count > 0)
+                    {
+                        pages.gameObject.SetActive(true);
+                    }
+                }
+                if (thing.gameObject.name == "Beast Castle")
+                {
+                    if (done.wisdom == "BC")
+                    {
+                        wisdom.gameObject.SetActive(true);
+                    }
+                    if (done.limit == "BC")
+                    {
+                        limit.gameObject.SetActive(true);
+                    }
+                    if (done.BCPages.Count > 0)
+                    {
+                        pages.gameObject.SetActive(true);
+                    }
+                }
+                if (thing.gameObject.name == "Disney Castle")
+                {
+                    if (done.wisdom == "DC")
+                    {
+                        wisdom.gameObject.SetActive(true);
+                    }
+                    if (done.limit == "DC")
+                    {
+                        limit.gameObject.SetActive(true);
+                    }
+                    if (done.DCPages.Count > 0)
+                    {
+                        pages.gameObject.SetActive(true);
+                    }
+                }
+                if (thing.gameObject.name == "Drive Form")
+                {
+                    if (done.wisdom == "Forms")
+                    {
+                        wisdom.gameObject.SetActive(true);
+                    }
+                    if (done.limit == "Forms")
+                    {
+                        limit.gameObject.SetActive(true);
+                    }
+                    if (done.FormPages.Count > 0)
+                    {
+                        pages.gameObject.SetActive(true);
+                    }
+                }
+                if (thing.gameObject.name == "Halloween Town")
+                {
+                    if (done.wisdom == "HT")
+                    {
+                        wisdom.gameObject.SetActive(true);
+                    }
+                    if (done.limit == "HT")
+                    {
+                        limit.gameObject.SetActive(true);
+                    }
+                    if (done.HTPages.Count > 0)
+                    {
+                        pages.gameObject.SetActive(true);
+                    }
+                }
+                if (thing.gameObject.name == "Hollow Bastion" )
+                {
+                    if (done.wisdom == "HB")
+                    {
+                        wisdom.gameObject.SetActive(true);
+                    }
+                    if (done.limit == "HB")
+                    {
+                        limit.gameObject.SetActive(true);
+                    }
+                    if (done.HBPages.Count > 0)
+                    {
+                        pages.gameObject.SetActive(true);
+                    }
+                }
+                if (thing.gameObject.name == "Port Royal")
+                {
+                    if (done.wisdom == "PR")
+                    {
+                        wisdom.gameObject.SetActive(true);
+                    }
+                    if (done.limit == "PR")
+                    {
+                        limit.gameObject.SetActive(true);
+                    }
+                    if (done.PRPages.Count > 0)
+                    {
+                        pages.gameObject.SetActive(true);
+                    }
+                }
+                if (thing.gameObject.name == "Levels")
+                {
+                    if (done.wisdom == "Levels")
+                    {
+                        wisdom.gameObject.SetActive(true);
+                    }
+                    if (done.limit == "Levels")
+                    {
+                        limit.gameObject.SetActive(true);
+                    }
+                    if (done.LevelPages.Count > 0)
+                    {
+                        pages.gameObject.SetActive(true);
+                    }
+                }
+                if (thing.gameObject.name == "Pride Lands")
+                {
+                    if (done.wisdom == "PL")
+                    {
+                        wisdom.gameObject.SetActive(true);
+                    }
+                    if (done.limit == "PL")
+                    {
+                        limit.gameObject.SetActive(true);
+                    }
+                    if (done.PLPages.Count > 0)
+                    {
+                        pages.gameObject.SetActive(true);
+                    }
+                }
+                if (thing.gameObject.name == "Space Parinoids")
+                {
+                    if (done.wisdom == "SP")
+                    {
+                        wisdom.gameObject.SetActive(true);
+                    }
+                    if (done.limit == "SP")
+                    {
+                        limit.gameObject.SetActive(true);
+                    }
+                    if (done.SPPages.Count > 0)
+                    {
+                        pages.gameObject.SetActive(true);
+                    }
+                }
+                if (thing.gameObject.name == "TWTNW")
+                {
+                    if (done.wisdom == "TWTNW")
+                    {
+                        wisdom.gameObject.SetActive(true);
+                    }
+                    if (done.limit == "TWTNW")
+                    {
+                        limit.gameObject.SetActive(true);
+                    }
+                    if (done.TWTNWPages.Count > 0)
+                    {
+                        pages.gameObject.SetActive(true);
+                    }
+                }
+                if (thing.gameObject.name == "Olympus Collesium")
+                {
+                    if (done.wisdom == "OC")
+                    {
+                        wisdom.gameObject.SetActive(true);
+                    }
+                    if (done.limit == "OC")
+                    {
+                        limit.gameObject.SetActive(true);
+                    }
+                    if (done.OCPages.Count > 0)
+                    {
+                        pages.gameObject.SetActive(true);
+                    }
+                }
+                if (thing.gameObject.name == "Twilight Town")
+                {
+                    if (done.wisdom == "TT")
+                    {
+                        wisdom.gameObject.SetActive(true);
+                    }
+                    if (done.limit == "TT")
+                    {
+                        limit.gameObject.SetActive(true);
+                    }
+                    if (done.TTPages.Count > 0)
+                    {
+                        pages.gameObject.SetActive(true);
+                    }
+                }
+                if (thing.gameObject.name == "Land of Dragons" )
+                {
+                    if (done.wisdom == "LoD")
+                    {
+                        wisdom.gameObject.SetActive(true);
+                    }
+                    if (done.limit == "LoD")
+                    {
+                        limit.gameObject.SetActive(true);
+                    }
+                    if (done.LoDPages.Count > 0)
+                    {
+                        pages.gameObject.SetActive(true);
+                    }
+                }
+
+                if (!fuck)
+                {
+                    totalnumber = int.Parse(total.text);
+                    totalnumber += FreeCount;
+                    total.text = totalnumber.ToString();                    
+                    fuck = true;
+                }
+                
+
             }
         }
        
@@ -500,13 +779,6 @@ public class Count : MonoBehaviour
                     checks.gameObject.SetActive(true);
                 }
             }
-        }
-        else if (thing.gameObject.name == "Total")
-        {
-            totalnumber = int.Parse(total.text);
-            totalnumber++;
-            total.text = totalnumber.ToString();
-
         }
         because = false;
     }
