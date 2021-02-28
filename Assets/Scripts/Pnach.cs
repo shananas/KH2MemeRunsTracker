@@ -1377,11 +1377,11 @@ public class Pnach : MonoBehaviour
                     {
                         if (extraFormsNames[extraForms.IndexOf(parts[4])] == "Wisdom")
                         {
-                            wisdom = "Level";
+                            wisdom = "Levels";
                         }
                         else if (extraFormsNames[extraForms.IndexOf(parts[4])] == "Limit")
                         {
-                            limit = "Level";
+                            limit = "Levels";
                         }
                     }
                 }                
