@@ -1181,11 +1181,11 @@ public class Pnach : MonoBehaviour
                     {
                         if (extraFormsNames[extraForms.IndexOf(parts[4])] == "Wisdom")
                         {
-                            wisdom = "STT";
+                            wisdom = "TT";
                         }
                         else if (extraFormsNames[extraForms.IndexOf(parts[4])] == "Limit")
                         {
-                            limit = "STT";
+                            limit = "TT";
                         }
                     }
                 }
